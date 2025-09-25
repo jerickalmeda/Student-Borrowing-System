@@ -1,0 +1,20 @@
+# PHP and project files to ignore
+/phpmyadmin/config.inc.php
+/phpmyadmin/config.inc.php.backup
+/phpmyadmin/setup/config.php
+/.env
+/vendor/
+/node_modules/
+/uploads/
+/tmp/
+*.log
+.idea/
+.vscode/
+.DS_Store
+
+# Composer
+/composer.lock
+
+# OS files
+thumbs.db
+desktop.ini
