@@ -1,3 +1,3 @@
 <?php
-    echo "IT1";
+    echo "kamatyonon na ang IT1";
 ?>
