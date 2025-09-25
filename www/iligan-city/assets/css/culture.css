@@ -1,0 +1,613 @@
+/* Culture Page Styles */
+
+.cultural-overview {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.overview-text h2 {
+    font-size: 2.5rem;
+    color: #1a365d;
+    margin-bottom: 2rem;
+}
+
+.overview-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.culture-wheel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        #64b5f6 0deg 90deg,
+        #42a5f5 90deg 180deg,
+        #2196f3 180deg 270deg,
+        #1976d2 270deg 360deg
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.culture-segment {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #1a365d;
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: counter-rotate 20s linear infinite;
+}
+
+@keyframes counter-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+.culture-segment.maranao { top: 10px; left: 50%; transform: translateX(-50%); }
+.culture-segment.cebuano { right: 10px; top: 50%; transform: translateY(-50%); }
+.culture-segment.ilonggo { bottom: 10px; left: 50%; transform: translateX(-50%); }
+.culture-segment.modern { left: 10px; top: 50%; transform: translateY(-50%); }
+
+.culture-segment i {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: #64b5f6;
+}
+
+/* Festivals Section */
+.festivals-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.festivals-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.festival-card {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.festival-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.festival-card.featured {
+    background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+    color: white;
+}
+
+.festival-header {
+    padding: 2rem;
+    text-align: center;
+}
+
+.festival-date {
+    background: rgba(255, 255, 255, 0.2);
+    color: #1a365d;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.festival-card.featured .festival-date {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.festival-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1a365d;
+}
+
+.festival-card.featured .festival-header h3 {
+    color: white;
+}
+
+.festival-subtitle {
+    color: #666;
+    font-style: italic;
+}
+
+.festival-card.featured .festival-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.festival-content {
+    padding: 0 2rem 2rem;
+}
+
+.festival-highlights {
+    margin-top: 1.5rem;
+}
+
+.festival-highlights h4 {
+    color: #1a365d;
+    margin-bottom: 1rem;
+}
+
+.festival-card.featured .festival-highlights h4 {
+    color: white;
+}
+
+.festival-highlights ul {
+    list-style: none;
+}
+
+.festival-highlights li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #666;
+}
+
+.festival-card.featured .festival-highlights li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.festival-highlights li i {
+    color: #64b5f6;
+    width: 16px;
+}
+
+.festival-card.featured .festival-highlights li i {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Arts & Crafts */
+.arts-crafts {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.arts-grid {
+    margin-top: 3rem;
+}
+
+.art-showcase {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.art-showcase.reverse {
+    grid-template-columns: 2fr 1fr;
+}
+
+.art-visual {
+    background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.art-info h3 {
+    font-size: 2rem;
+    color: #1a365d;
+    margin-bottom: 1.5rem;
+}
+
+.art-info p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.art-features {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.feature-tag {
+    background: #64b5f6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Languages Section */
+.languages-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.language-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.language-card.primary {
+    background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+    color: white;
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.language-icon {
+    font-size: 3rem;
+    color: #64b5f6;
+    margin-bottom: 1rem;
+}
+
+.language-card.primary .language-icon {
+    color: white;
+}
+
+.language-card h3 {
+    color: #1a365d;
+    margin-bottom: 1rem;
+}
+
+.language-card.primary h3 {
+    color: white;
+}
+
+.language-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.language-card.primary p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.language-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #64b5f6;
+}
+
+.language-card.primary .stat-number {
+    color: white;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.language-card.primary .stat-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Cuisine Section */
+.cuisine-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.dish-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.dish-image {
+    height: 150px;
+    background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.dish-card h3 {
+    padding: 1rem;
+    color: #1a365d;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.dish-card p {
+    padding: 0 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.dish-origin {
+    padding: 1rem;
+    background: #f8f9fa;
+    color: #64b5f6;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Cultural Centers */
+.cultural-centers {
+    padding: 4rem 0;
+    background: white;
+}
+
+.centers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.center-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.center-card:hover {
+    background: white;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.center-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.center-header i {
+    color: #64b5f6;
+}
+
+.center-header h3 {
+    color: #1a365d;
+    margin: 0;
+}
+
+.center-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.center-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.info-item i {
+    color: #64b5f6;
+    width: 16px;
+}
+
+/* Cultural Calendar */
+.cultural-calendar {
+    padding: 4rem 0;
+    background: #1a365d;
+    color: white;
+}
+
+.cultural-calendar .section-title {
+    color: white;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.calendar-month {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.calendar-month.highlight {
+    background: #64b5f6;
+}
+
+.calendar-month h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.calendar-events {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.event-item.featured {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.event-date {
+    font-weight: bold;
+    color: #64b5f6;
+}
+
+.calendar-month.highlight .event-date {
+    color: white;
+}
+
+.event-name {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overview-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .culture-wheel {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .culture-segment {
+        width: 60px;
+        height: 60px;
+        font-size: 0.7rem;
+    }
+    
+    .culture-segment i {
+        font-size: 1rem;
+    }
+    
+    .festivals-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .art-showcase,
+    .art-showcase.reverse {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .languages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dish-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .centers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .art-showcase {
+        padding: 2rem 1rem;
+    }
+    
+    .festival-header,
+    .festival-content {
+        padding: 1.5rem;
+    }
+    
+    .culture-wheel {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .culture-segment {
+        width: 50px;
+        height: 50px;
+        font-size: 0.6rem;
+    }
+}
